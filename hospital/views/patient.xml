@@ -1,0 +1,23 @@
+<odoo>
+
+    <menuitem id="hospital_root"
+              name="Hospital"
+              parent="sale_menu_root"
+              sequence="10 " groups="sales_team.group_sale_salesman"/>
+
+    <menuitem id="menu_sale_order_invoice"
+              action="action_orders_to_invoice"
+              parent="sale.menu_sale_invoicing"
+              sequence="2" active="False"/>
+
+    <record id="action_orders" model="ir.actions.act_window">
+        <field name="name">Patients</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital.patient</field>
+        <field name="view_mode">tree,form</field>
+        <!--        <field name="search_view_id" ref="sale_order_view_search_inherit_sale"/>-->
+        <!--        <field name="context">{}</field>-->
+        <!--        <field name="domain">[('state', 'not in', ('draft', 'sent', 'cancel'))]</field>-->
+
+    </record>
+</odoo>
